@@ -18,31 +18,28 @@ import java.util.List;
 @Builder
 @Data
 public class Customer implements Serializable {
-
-    private static final long serialVersionUID = -6142206671500721879L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="CUSTOMER_ID")
+    @Column(name="customer_id")
     private Integer customerId;
 
     @NotBlank
-    @Column(name = "CUSTOMER_NAME")
-    private String customerName;
+    @Column(name = "customer_name")
+    private String name;
 
-    @Column(name = "CUSTOMER_ADDRESS")
-    private String customerAddress;
+    @Column(name = "customer_address")
+    private String address;
 
-    @Column(name = "DOCUMENT_TYPE")
+    @Column(name = "document_type")
     private Integer documentType;
 
     @NotBlank
-    @Column(name = "DOCUMENT_NUMBER")
+    @Column(name = "document_number")
     private String documentNumber;
 
     @Email
-    @Column(name = "CUSTOMER_EMAIL")
-    private String customerEmail;
+    @Column(name = "customer_email")
+    private String email;
 
 
 }
